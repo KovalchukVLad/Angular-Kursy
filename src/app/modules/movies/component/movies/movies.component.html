@@ -1,0 +1,29 @@
+<div [className]="'part2'">
+  <div [className]="'heading'">
+    <div [className]="'heading2'">List of Films</div>
+
+    <div [className]="'sorting'">
+      <form [formGroup]="mySort" (ngSubmit)="submit()">
+        <div>Sort by:</div>
+        <select [formControl]="sortControl">
+          <option [value]="'vote_count.desc'">Vouting</option>
+          <option [value]="'popularity.desc'">Popular</option>
+          <option [value]="'release_date.desc'">Release date</option>
+        </select>
+        <input  type="number" [formControl]="yearControl" [class.error]="!yearControl.valid">
+        <button [disabled]="!mySort.valid">Sort</button>
+        <div [className]="'attention'"  *ngIf="!yearControl.valid">
+          Year must be higher then 1980 and smaller then 2021
+        </div>
+      </form>
+    </div>
+  </div>
+  <div [className]="'movies'">
+    <app-movie *ngFor="let movie of movies" [movie]="movie" [className]="'movie'"></app-movie>
+  </div>
+  <div [className]="'buttons'">
+    <button  (click)="left()">Previos</button>
+    <div>{{page}}</div>
+    <button (click)="right()">Next</button>
+  </div>
+</div>

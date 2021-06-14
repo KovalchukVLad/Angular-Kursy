@@ -1,0 +1,28 @@
+<div [className]="'heading'">
+  <h1 [routerLink]="''" [className]="'headtext'">FILM.UA</h1>
+  <a  [routerLink]="'movies'" [className]="'href'">LIST</a>
+  <form [formGroup]="myCheck" (change)="change()">
+    <input type="checkbox" [formControl]="checkControl">
+  </form>
+</div>
+
+
+<div [className]="'content'">
+
+  <div [className]="'part1'">
+    <div *ngFor="let genre of genres" [className]="'genr_list'">
+      <a [routerLink]="['movies/',genre.name,genre.id]" href="">{{genre.name}}</a>
+    </div>
+  </div>
+
+
+  <router-outlet></router-outlet>
+
+
+
+</div>
+
+<div [className]="'footer'">
+    <p>Contacts</p>
+</div>
+

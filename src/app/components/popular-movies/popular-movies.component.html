@@ -1,0 +1,6 @@
+  <div [className]="'part2'">
+    <div [className]="'heading2'">New Films</div>
+    <div [className]="'movies'">
+      <app-popular-movie *ngFor="let movie of movies" [movie]="movie" [className]="'movie'"></app-popular-movie>
+    </div>
+  </div>

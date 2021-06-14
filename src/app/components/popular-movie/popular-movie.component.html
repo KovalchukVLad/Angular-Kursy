@@ -1,0 +1,13 @@
+<div [className]="'movie'">
+  <div [className]="'part'">
+    <div>
+      <a [routerLink]="['movies/',movie.id]">
+        <img src='{{url+movie.poster_path}}' alt="">
+      </a>
+
+    </div>
+    <div [className]="'title'">
+      {{movie.title}}
+    </div>
+  </div>
+</div>

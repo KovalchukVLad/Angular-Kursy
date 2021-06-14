@@ -1,0 +1,30 @@
+.movie{
+  display: flex;
+  column-gap: 50px;
+  margin: 10px;
+}
+.left_part{
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+
+}
+
+.left_part img{
+  width: 100%;
+}
+
+
+.right_part .head{
+  font-size: 50px;
+  text-align: center;
+}
+.smallhead{
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.smallhead2{
+  margin-top: 10px;
+  font-size: 20px;
+}

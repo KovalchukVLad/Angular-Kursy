@@ -1,0 +1,39 @@
+<div *ngIf="movie" [className]="'movie'">
+
+  <div [className]="'left_part'">
+    <div>{{movie.title}}</div>
+    <a [href]="movie.homepage" target="_blank"><img  src='{{url+movie.backdrop_path}}' alt=""></a>
+
+  </div>
+
+  <div [className]="'right_part'">
+    <div [className]="'head'">Info</div>
+    <div [className]="'smallhead'">Vote average:</div>
+    <div [className]="'smallhead2'">{{movie.vote_average}}</div>
+
+    <div [className]="'smallhead'">Runtime:</div>
+    <div [className]="'smallhead2'">{{movie.runtime}}</div>
+
+    <div [className]="'smallhead'">Release date:</div>
+    <div [className]="'smallhead2'">{{movie.release_date}}</div>
+
+    <div [className]="'smallhead'">Genres:</div>
+    <div [className]="'smallhead2'" *ngFor="let genre of movie.genres">
+      {{genre.name}}
+    </div>
+
+    <div [className]="'smallhead'">Film Budget:</div>
+    <div [className]="'smallhead2'">{{movie.budget}}</div>
+
+    <div [className]="'smallhead'">Short review:</div>
+    <div [className]="'smallhead2'">{{movie.overview}}</div>
+
+
+
+
+
+  </div>
+
+
+</div>
+
